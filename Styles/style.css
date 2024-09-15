@@ -27,7 +27,7 @@ body {
   z-index: 1;
 }
 
-.top__menu{
+.top__menu {
   display: flex;
   border: #333;
 }
@@ -49,7 +49,6 @@ body {
   list-style: none;
   padding: 0;
   margin-top: 1rem;
-  /* Push the menu items down below the toggle button */
 }
 
 .nav-links li {
@@ -84,20 +83,66 @@ body {
   width: 80px;
 }
 
-.hidden-icon {
-  display: none;
-}
-
 main {
   margin-left: 270px;
-  /* Space for the sidebar */
   padding: 20px;
   flex-grow: 1;
-  isolation: isolate;
   transition: margin-left 0.3s;
 }
 
 .sidebar.collapsed~main {
   margin-left: 80px;
-  /* Adjust for the collapsed sidebar */
+}
+
+ /* Bottom navbar styles for small screens */
+ .bottom-navbar {
+  display: none !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.bottom-navbar a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+
+.bottom-navbar a:hover {
+  color: #ff0000;
+}
+
+.bottom-navbar i {
+  font-size: 18px;
+}
+
+.bottom-navbar .nav-text {
+  margin-top: 5px;
+}
+
+/* Media query for 800px and below */
+@media (max-width: 800px) {
+  .sidebar {
+      display: none !important;
+  }
+
+  .bottom-navbar {
+      display: flex !important;
+  }
+
+  main {
+      margin-left: 0;
+      margin-bottom: 60px;
+  }
 }

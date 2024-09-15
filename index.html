@@ -5,41 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Collapsible Sidebar & Bottom Navbar</title>
     <link rel="stylesheet" href="/Styles/style.css">
-    <title>Collapsible Sidebar</title>
-    <style> </style>
 </head>
 
 <body>
-   
-        <nav class="sidebar" id="sidebar">
-             <div class="top__menu">
-                 <h2 class="logo" id="logo">Waste-Worrier</h2>
-                 <span class="toggle-btn" id="toggle-btn">☰</span>
-             </div>
-            
-            <ul class="nav-links">
-                <li><a href="#"><i class="fas fa-home"></i> <span class="link-text">Home</span></a></li>
-<li><a href="#"><i class="fas fa-fire"></i> <span class="link-text">Trending</span></a></li>
-<li><a href="#"><i class="fas fa-bell"></i> <span class="link-text">Subscriptions</span></a></li>
-<li><a href="#"><i class="fas fa-video"></i> <span class="link-text">Your Videos</span></a></li>
-<li><a href="#"><i class="fas fa-history"></i> <span class="link-text">History</span></a></li>
-<li><a href="#"><i class="fas fa-folder"></i> <span class="link-text">Library</span></a></li>
-<li><a href="#"><i class="fas fa-clock"></i> <span class="link-text">Watch Later</span></a></li>
-<li><a href="#"><i class="fas fa-thumbs-up"></i> <span class="link-text">Liked Videos</span></a></li>
-<li><a href="#"><i class="fas fa-cog"></i> <span class="link-text">Settings</span></a></li>
-<li><a href="#"><i class="fas fa-sign-out-alt"></i> <span class="link-text">Logout</span></a></li>
 
-            </ul>
-        </nav>
-    
+    <nav class="sidebar" id="sidebar">
+        <div class="top__menu">
+            <h2 class="logo" id="logo">Waste-Worrier</h2>
+            <span class="toggle-btn" id="toggle-btn">☰</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#"><i class="fas fa-home"></i> <span class="link-text">Home</span></a></li>
+            <li><a href="#"><i class="fas fa-fire"></i> <span class="link-text">Trending</span></a></li>
+            <li><a href="#"><i class="fas fa-bell"></i> <span class="link-text">Subscriptions</span></a></li>
+            <li><a href="#"><i class="fas fa-video"></i> <span class="link-text">Your Videos</span></a></li>
+            <li><a href="#"><i class="fas fa-history"></i> <span class="link-text">History</span></a></li>
+            <li><a href="#"><i class="fas fa-folder"></i> <span class="link-text">Library</span></a></li>
+            <li><a href="#"><i class="fas fa-clock"></i> <span class="link-text">Watch Later</span></a></li>
+            <li><a href="#"><i class="fas fa-thumbs-up"></i> <span class="link-text">Liked Videos</span></a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> <span class="link-text">Settings</span></a></li>
+            <li><a href="#"><i class="fas fa-sign-out-alt"></i> <span class="link-text">Logout</span></a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Bottom Navigation Bar for Mobile -->
+    <div class="bottom-navbar" id="bottom-navbar">
+        <a href="#"><i class="fas fa-home"></i><span class="nav-text">Home</span></a>
+        <a href="#"><i class="fas fa-fire"></i><span class="nav-text">Trending</span></a>
+        <a href="#"><i class="fas fa-bell"></i><span class="nav-text">Subscriptions</span></a>
+        <a href="#"><i class="fas fa-folder"></i><span class="nav-text">Library</span></a>
+        <a href="#"><i class="fas fa-cog"></i><span class="nav-text">Settings</span></a>
+    </div>
+
     <main class="content">
         <h1>Welcome to MyApp</h1>
         <p>This is the main content area.</p>
     </main>
 
-
     <script src="/Scripts/main.js"></script>
+
 </body>
 
 </html>

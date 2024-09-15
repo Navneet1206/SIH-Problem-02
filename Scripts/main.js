@@ -11,13 +11,13 @@ document.getElementById("toggle-btn").addEventListener("click", function () {
     logo.classList.add("hidden");
     navLinks.forEach((link, index) => {
       if (index >= 4) {
-        link.classList.add("hidden-icon");
+        link.style.display = "none";  // Hide extra links
       }
     });
   } else {
     logo.classList.remove("hidden");
     navLinks.forEach((link) => {
-      link.classList.remove("hidden-icon");
+      link.style.display = "flex";  // Show all links
     });
   }
 });
