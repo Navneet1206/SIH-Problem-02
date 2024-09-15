@@ -1,3 +1,4 @@
+/* Reset and base styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,22 +8,26 @@
 body {
   font-family: Arial, sans-serif;
   display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes the full height of the viewport */
 }
 
-svg{
+svg {
   fill: black !important;
 }
 
-
-
+/* Sidebar styles */
 .sidebar {
   width: 250px;
   background-color: #f9f9f9;
   height: 100vh;
   padding: 8px 10px 0px 20px;
   position: fixed;
+  left: 0;
+  top: 0;
   transition: width 0.3s;
   overflow: hidden;
+  z-index: 1000;
 }
 
 .toggle-btn {
@@ -30,12 +35,10 @@ svg{
   right: 20px;
   padding: 10px;
   cursor: pointer;
-  z-index: 1;
 }
 
 .top__menu {
   display: flex;
-  border: #333;
 }
 
 .logo {
@@ -48,7 +51,6 @@ svg{
 
 .logo.hidden {
   opacity: 0;
-  height: 30px;
 }
 
 .nav-links {
@@ -89,19 +91,21 @@ svg{
   width: 80px;
 }
 
+/* Main content */
 main {
-  margin-left: 270px;
+  margin-left: 270px; /* Leaves space for the sidebar */
   padding: 20px;
   flex-grow: 1;
   transition: margin-left 0.3s;
+  overflow: hidden; /* Prevents overflow from content affecting layout */
 }
 
 .sidebar.collapsed~main {
-  margin-left: 80px;
+  margin-left: 80px; /* Adjusts content when sidebar is collapsed */
 }
 
- /* Bottom navbar styles for small screens */
- .bottom-navbar {
+/* Bottom navbar styles for small screens */
+.bottom-navbar {
   display: none !important;
   position: fixed;
   bottom: 0;
@@ -110,10 +114,9 @@ main {
   background-color: #fff;
   border-top: 1px solid #ddd;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  display: flex;
   justify-content: space-around;
   padding: 10px 0;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .bottom-navbar a {
@@ -137,23 +140,21 @@ main {
   margin-top: 5px;
 }
 
-/* Media query for 800px and below */
+/* Media query for mobile view */
 @media (max-width: 800px) {
   .sidebar {
-      display: none !important;
+    display: none !important;
   }
 
   .bottom-navbar {
-      display: flex !important;
+    display: flex !important;
   }
 
   main {
-      margin-left: 0;
-      margin-bottom: 60px;
+    margin-left: 0;
+    margin-bottom: 60px; /* Leaves space for the bottom navbar */
   }
 }
-
-
 
 /* Initially hide the extra items in the bottom navbar */
 .more-items-bottom {
@@ -165,11 +166,11 @@ main {
   background-color: #fff;
   border-top: 1px solid #ddd;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 11;
+  z-index: 1000;
   padding: 10px 0;
   display: flex;
-  justify-content: space-around; /* Ensure items are evenly distributed */
-  flex-direction: row; /* All items in one row */
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 .more-items-bottom a {
@@ -185,23 +186,19 @@ main {
   color: #ff0000;
 }
 
-/* Main bottom navbar will remain at the bottom */
-.bottom-navbar {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #fff;
-  z-index: 10;
+.sidebar.collapsed~main {
+  margin-left: 80px;
 }
 
-/* Additional space for bottom items when more items are shown */
+/* Extra margin for the expanded navbar */
 @media (max-width: 800px) {
   .more-items-bottom {
-      display: flex;
-      flex-direction: row; /* Ensure it stays in a row on mobile as well */
+    display: flex;
+    flex-direction: row;
   }
 
   main {
-      margin-bottom: 100px; /* Make space for expanded more items */
+    margin-bottom: 100px; /* Additional space when "More" items are visible */
   }
 }
+  
