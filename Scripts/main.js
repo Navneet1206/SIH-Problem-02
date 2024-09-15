@@ -21,3 +21,15 @@ document.getElementById("toggle-btn").addEventListener("click", function () {
     });
   }
 });
+
+
+document.getElementById("more-bottom-navbar").addEventListener("click", function () {
+  const moreItemsBottom = document.getElementById("more-items-bottom");
+  
+  // Toggle visibility of the more items in bottom navbar
+  if (moreItemsBottom.style.display === "none") {
+      moreItemsBottom.style.display = "flex";
+  } else {
+      moreItemsBottom.style.display = "none";
+  }
+});
