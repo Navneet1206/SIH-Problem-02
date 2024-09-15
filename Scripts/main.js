@@ -2,9 +2,13 @@ document.getElementById("toggle-btn").addEventListener("click", function () {
   const sidebar = document.getElementById("sidebar");
   const navLinks = document.querySelectorAll(".nav-links li");
   const logo = document.getElementById("logo");
+  const toggleBtn = document.getElementById("toggle-btn");
 
   // Toggle sidebar width
   sidebar.classList.toggle("collapsed");
+
+  // Toggle rotation on the toggle button
+  toggleBtn.classList.toggle("rotated");
 
   // Hide logo when sidebar is collapsed
   if (sidebar.classList.contains("collapsed")) {
@@ -22,7 +26,6 @@ document.getElementById("toggle-btn").addEventListener("click", function () {
   }
 });
 
-
 document.getElementById("more-bottom-navbar").addEventListener("click", function () {
   const moreItemsBottom = document.getElementById("more-items-bottom");
   
@@ -33,3 +36,6 @@ document.getElementById("more-bottom-navbar").addEventListener("click", function
       moreItemsBottom.style.display = "none";
   }
 });
+
+
+

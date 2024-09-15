@@ -31,10 +31,22 @@ svg {
 }
 
 .toggle-btn {
-  position: absolute;
-  right: 20px;
+  position: absolute !important;
+  right: 20px !important;
   padding: 10px;
   cursor: pointer;
+  margin-left: auto;
+  border: none;
+  border-radius: .5em;
+  background: none;
+}
+
+.toggle-btn svg {
+  transition: transform 0.3s ease !important; /* Smooth transition for rotation */
+}
+
+.toggle-btn.rotated svg {
+  transform: rotate(180deg) !important; /* Rotate the icon 180 degrees */
 }
 
 .top__menu {
@@ -51,6 +63,8 @@ svg {
 
 .logo.hidden {
   opacity: 0;
+  height: 35px;
+  width: 0;
 }
 
 .nav-links {
@@ -85,6 +99,7 @@ svg {
 
 .collapsed .link-text {
   opacity: 0;
+  width: 0;
 }
 
 .sidebar.collapsed {
@@ -100,7 +115,7 @@ main {
   overflow: hidden; /* Prevents overflow from content affecting layout */
 }
 
-.sidebar.collapsed~main {
+.sidebar.collapsed ~ main {
   margin-left: 80px; /* Adjusts content when sidebar is collapsed */
 }
 
@@ -154,6 +169,15 @@ main {
     margin-left: 0;
     margin-bottom: 60px; /* Leaves space for the bottom navbar */
   }
+
+  .more-items-bottom {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main {
+    margin-bottom: 100px; /* Additional space when "More" items are visible */
+  }
 }
 
 /* Initially hide the extra items in the bottom navbar */
@@ -168,7 +192,6 @@ main {
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   padding: 10px 0;
-  display: flex;
   justify-content: space-around;
   flex-direction: row;
 }
@@ -185,20 +208,3 @@ main {
 .more-items-bottom a:hover {
   color: #ff0000;
 }
-
-.sidebar.collapsed~main {
-  margin-left: 80px;
-}
-
-/* Extra margin for the expanded navbar */
-@media (max-width: 800px) {
-  .more-items-bottom {
-    display: flex;
-    flex-direction: row;
-  }
-
-  main {
-    margin-bottom: 100px; /* Additional space when "More" items are visible */
-  }
-}
-  
