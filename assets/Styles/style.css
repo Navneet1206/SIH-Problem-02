@@ -43,7 +43,7 @@ svg {
 .toggle-btn {
   position: absolute !important;
   right: 20px !important;
-  padding: 10px;
+  padding: 3px;
   cursor: pointer;
   margin-left: auto;
   border: none;

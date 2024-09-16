@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>Waste Management Teams</title>
+    <link rel="stylesheet" href="/assets/Styles/style.css" />
+    <link rel="stylesheet" href="/assets/Styles/teams.css">
+</head>
+
+<body>
+    <nav class="sidebar" id="sidebar">
+        <div class="top__menu">
+            <h2 class="logo" id="logo">Eco Warriors</h2>
+            <span class="toggle-btn" onclick="toggleSidebar()" id="toggle-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e8eaed">
+                    <path
+                        d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z" />
+                </svg>
+            </span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html"><i class="fas fa-home"></i> <span class="link-text">Home</span></a>
+            </li>
+            <li>
+                <a href="teams.html"><i class="fas fa-users"></i>
+                    <span class="link-text">Teams</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-trophy"></i>
+                    <span class="link-text">Ranking System</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-recycle"></i>
+                    <span class="link-text">Request Collection</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-gift"></i>
+                    <span class="link-text">Rewards</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-donate"></i>
+                    <span class="link-text">Donate</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-book"></i>
+                    <span class="link-text">Educational Resources</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-question-circle"></i>
+                    <span class="link-text">Q&A</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-globe"></i>
+                    <span class="link-text">Leaderboard</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-envelope"></i>
+                    <span class="link-text">Contact Us</span></a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Bottom Navigation Bar for Mobile -->
+    <div class="bottom-navbar" id="bottom-navbar">
+        <a href="#"><i class="fas fa-home"></i><span class="nav-text">Home</span></a>
+        <a href="#"><i class="fas fa-users"></i><span class="nav-text">Teams</span></a>
+        <a href="#"><i class="fas fa-trophy"></i><span class="nav-text">Ranking</span></a>
+        <a href="#"><i class="fas fa-gift"></i><span class="nav-text">Rewards</span></a>
+
+        <!-- "More" button to show additional options -->
+        <a href="#" id="more-bottom-navbar"><i class="fas fa-ellipsis-h"></i><span class="nav-text">More</span></a>
+
+        <!-- Hidden items by default -->
+        <div id="more-items-bottom" class="more-items-bottom" style="display: none">
+            <a href="#"><i class="fas fa-recycle"></i><span class="nav-text">Request Collection</span></a>
+            <a href="#"><i class="fas fa-donate"></i><span class="nav-text">Donate</span></a>
+            <a href="#"><i class="fas fa-book"></i><span class="nav-text">Education</span></a>
+            <a href="#"><i class="fas fa-question-circle"></i><span class="nav-text">Q&A</span></a>
+            <a href="#"><i class="fas fa-globe"></i><span class="nav-text">Leaderboard</span></a>
+        </div>
+    </div>
+
+    <main class="content">
+    <!-- Team Creation Section -->
+    <section class="team-section">
+        <h1>Create a Team</h1>
+        <div id="team-creation">
+            <input type="text" id="team-name" placeholder="Enter team name" required>
+            <div id="member-input-container">
+                <!-- Input fields for team members will be added here -->
+            </div>
+            <button id="add-member">Add Member</button>
+            <button id="create-team">Create Team</button>
+        </div>
+
+        <!-- Team Members Display -->
+        <div id="team-container">
+            <!-- Team members' cards will appear here -->
+        </div>
+    </section>
+    
+    </main>
+
+
+    <script src="/assets/Scripts/main.js"></script>
+    <script src="/assets/Scripts/teams.js"></script>
+</body>
+
+</html>
