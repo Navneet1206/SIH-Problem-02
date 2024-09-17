@@ -2,19 +2,32 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <title>Waste Management Teams</title>
-    <link rel="stylesheet" href="/assets/Styles/style.css" />
-    <link rel="stylesheet" href="/assets/Styles/teams.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Waste Management Platform</title>
+    <!-- scroll animation AOS  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="/Styles/index.css">
+    <link rel="stylesheet" href="/Styles/teams.css">
+
+    <!-- scripts -->
+    <script src="/Scripts/tilt.js"></script>
+
 </head>
 
 <body>
-    <nav class="sidebar" id="sidebar">
+
+     <!-- ================================common Start================== -->
+
+     <nav class="sidebar" id="sidebar">
         <div class="top__menu">
-            <h2 class="logo" id="logo">Eco Warriors</h2>
-            <span class="toggle-btn" onclick="toggleSidebar()" id="toggle-btn">
+            <h2 class="logo" id="logo">Waste-Worrier</h2>
+            <span class="toggle-btn" onclick=toggleSidebar() id="toggle-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                     fill="#e8eaed">
                     <path
@@ -23,92 +36,89 @@
             </span>
         </div>
         <ul class="nav-links">
-            <li>
-                <a href="index.html"><i class="fas fa-home"></i> <span class="link-text">Home</span></a>
+            <li><a href="index.html"><i class="fas fa-home"></i> <span class="link-text">Home</span></a></li>
+            <li><a href="teams.html"><i class="fas fa-users"></i> <span class="link-text">Teams</span></a></li>
+            <li><a href="ranking.html"><i class="fas fa-trophy"></i> <span class="link-text">Ranking System</span></a>
             </li>
-            <li>
-                <a href="teams.html"><i class="fas fa-users"></i>
-                    <span class="link-text">Teams</span></a>
+            <li><a href="r_collection.html"><i class="fas fa-recycle"></i> <span class="link-text">Request
+                        Collection</span></a></li>
+            <li><a href="rewards.html"><i class="fas fa-gift"></i> <span class="link-text">Rewards</span></a></li>
+            <li><a href="donation.html"><i class="fas fa-donate"></i> <span class="link-text">Donate</span></a></li>
+            <li><a href="q_and_a.html"><i class="fas fa-question-circle"></i> <span class="link-text">Q&A</span></a>
             </li>
-            <li>
-                <a href="#"><i class="fas fa-trophy"></i>
-                    <span class="link-text">Ranking System</span></a>
+            <!-- <li><a href="#"><i class="fas fa-globe"></i> <span class="link-text">Leaderboard</span></a></li> -->
+            <li><a href="/contactus.html"><i class="fas fa-envelope"></i> <span class="link-text">Contact Us</span></a>
             </li>
-            <li>
-                <a href="#"><i class="fas fa-recycle"></i>
-                    <span class="link-text">Request Collection</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-gift"></i>
-                    <span class="link-text">Rewards</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-donate"></i>
-                    <span class="link-text">Donate</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-book"></i>
-                    <span class="link-text">Educational Resources</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-question-circle"></i>
-                    <span class="link-text">Q&A</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-globe"></i>
-                    <span class="link-text">Leaderboard</span></a>
-            </li>
-            <li>
-                <a href="#"><i class="fas fa-envelope"></i>
-                    <span class="link-text">Contact Us</span></a>
-            </li>
+            <li><a href="profile.html"><i class="fas fa-user"></i> <span class="link-text">Profile</span></a></li>
         </ul>
     </nav>
 
     <!-- Bottom Navigation Bar for Mobile -->
     <div class="bottom-navbar" id="bottom-navbar">
-        <a href="#"><i class="fas fa-home"></i><span class="nav-text">Home</span></a>
-        <a href="#"><i class="fas fa-users"></i><span class="nav-text">Teams</span></a>
-        <a href="#"><i class="fas fa-trophy"></i><span class="nav-text">Ranking</span></a>
-        <a href="#"><i class="fas fa-gift"></i><span class="nav-text">Rewards</span></a>
+        <a href="index.html"><i class="fas fa-home"></i><span class="nav-text">Home</span></a>
+        <a href="teams.html"><i class="fas fa-users"></i><span class="nav-text">Teams</span></a>
+        <a href="ranking.html"><i class="fas fa-trophy"></i><span class="nav-text">Ranking</span></a>
+        <a href="rewards.html"><i class="fas fa-gift"></i><span class="nav-text">Rewards</span></a>
 
         <!-- "More" button to show additional options -->
         <a href="#" id="more-bottom-navbar"><i class="fas fa-ellipsis-h"></i><span class="nav-text">More</span></a>
 
         <!-- Hidden items by default -->
-        <div id="more-items-bottom" class="more-items-bottom" style="display: none">
-            <a href="#"><i class="fas fa-recycle"></i><span class="nav-text">Request Collection</span></a>
-            <a href="#"><i class="fas fa-donate"></i><span class="nav-text">Donate</span></a>
-            <a href="#"><i class="fas fa-book"></i><span class="nav-text">Education</span></a>
-            <a href="#"><i class="fas fa-question-circle"></i><span class="nav-text">Q&A</span></a>
-            <a href="#"><i class="fas fa-globe"></i><span class="nav-text">Leaderboard</span></a>
+        <div id="more-items-bottom" class="more-items-bottom" style="display: none;">
+            <a href="r_collection.html"><i class="fas fa-recycle"></i><span class="nav-text">Request
+                    Collection</span></a>
+            <a href="donation.html"><i class="fas fa-donate"></i><span class="nav-text">Donate</span></a>
+            <a href="q_and_a.html"><i class="fas fa-question-circle"></i><span class="nav-text">Q&A</span></a>
+            <!-- <a href="#"><i class="fas fa-globe"></i><span class="nav-text">Leaderboard</span></a> -->
+            <a href="/contactus.html"><i class="fas fa-envelope"></i> <span class="nav-text">Contact Us</span></a>
+            <a href="profile.html"><i class="fas fa-user"></i><span class="nav-text">Profile</span></a>
         </div>
     </div>
 
-    <main class="content">
-    <!-- Team Creation Section -->
-    <section class="team-section">
-        <h1>Create a Team</h1>
-        <div id="team-creation">
-            <input type="text" id="team-name" placeholder="Enter team name" required>
-            <div id="member-input-container">
-                <!-- Input fields for team members will be added here -->
-            </div>
-            <button id="add-member">Add Member</button>
-            <button id="create-team">Create Team</button>
-        </div>
+    <!-- <main class="content">
+        Main content Start at here
+        
+        <footer>
+            <p>&copy; 2023 EcoWarriors </p>
+            <p style="color: rgb(0, 0, 0, 0.4); font-size: 11px;">developed by team VyomX</p>
+        </footer>
+    </main> -->
+    <!-- ==================Common End==================== -->
 
-        <!-- Team Members Display -->
-        <div id="team-container">
-            <!-- Team members' cards will appear here -->
-        </div>
-    </section>
-    
+
+    <main class="content">
+
+
+
+
+        <footer>
+            <p>&copy; 2023 EcoWarriors </p>
+            <p style="color: rgb(0, 0, 0, 0.4); font-size: 11px;">developed by team VyomX</p>
+        </footer>
+
     </main>
 
+    <!-- footer -->
 
-    <script src="/assets/Scripts/main.js"></script>
-    <script src="/assets/Scripts/teams.js"></script>
+
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".hero title"), {
+            max: 25,
+            speed: 400
+        });
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".hero h1"));
+
+    </script>
+
+    <!-- ANIMATE ON SCROLL -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="/Scripts/main.js"></script>
+
 </body>
 
 </html>

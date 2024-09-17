@@ -3,7 +3,8 @@
   --primary-dark: #1d1d1d;
   --secondary-dark: #273b40;
   --hover-clr: #3c4748;
-  --primary-text-clr: #208c8c;
+  --secondary-hover-clr: #12de37;
+  --primary-text-clr: #20278c;
   --secondary-text-clr: #cae9ea;
   --white-clr: #ffff;
 }
@@ -29,7 +30,7 @@ svg {
 /* Sidebar styles */
 .sidebar {
   width: 250px;
-  background-color: var(--primary-text-clr);
+  background-color: rgba(0, 0, 0, 0.8);
   height: 100vh;
   padding: 8px 10px 0px 20px;
   position: fixed;
@@ -43,12 +44,19 @@ svg {
 .toggle-btn {
   position: absolute !important;
   right: 20px !important;
-  padding: 3px;
+  padding: 4px;
   cursor: pointer;
   margin-left: auto;
   border: none;
   border-radius: .5em;
   background: none;
+}
+
+
+.toggle-btn svg:hover {
+  fill: var(--primary-dark);
+  background-color: #12de37;
+  border-radius: 2px;
 }
 
 .toggle-btn svg {
@@ -87,6 +95,11 @@ svg {
 .nav-links li {
   margin: 15px 0;
 }
+.nav-links li:hover {
+  background-color: var(--secondary-hover-clr);
+  color: var(--hover-clr);
+  border-radius: 6px;
+}
 
 .nav-links a {
   letter-spacing: 0.5px;
@@ -100,7 +113,6 @@ svg {
 }
 
 .nav-links a:hover {
-  background-color: #e0e0e0;
   color: var(--hover-clr);
 }
 
@@ -139,7 +151,8 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: var(--primary-text-clr);
+  /* background-color: var(--primary-text-clr); */
+  background-color: rgba(0, 0, 0, 0.8);
   border-top: 1px solid #ddd;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   justify-content: space-around;
@@ -149,7 +162,7 @@ main {
 
 .bottom-navbar a {
   text-decoration: none;
-  color: var(--primary-dark);
+  color: var(--white-clr);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -157,7 +170,7 @@ main {
 }
 
 .bottom-navbar a:hover {
-  color: var(--white-clr);
+  color: var(--secondary-hover-clr);
 }
 
 .bottom-navbar i {
@@ -186,6 +199,7 @@ main {
   .more-items-bottom {
     display: flex;
     flex-direction: row;
+    
   }
 
    /* Additional space when "More" items are visible */
@@ -201,7 +215,7 @@ main {
   bottom: 60px; /* Place the expanded list above the bottom navbar */
   left: 0;
   width: 100%;
-  background-color: var(--primary-text-clr);
+  background-color: rgba(0, 0, 0, 0.8);
   border-top: 1px solid #ddd;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -212,7 +226,7 @@ main {
 
 .more-items-bottom a {
   text-decoration: none;
-  color: #333;
+  color: var(--white-clr);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -220,5 +234,5 @@ main {
 }
 
 .more-items-bottom a:hover {
-  color: var(--white-clr);
+  color: var(--secondary-hover-clr);
 }
