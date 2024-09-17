@@ -196,6 +196,8 @@ button:hover {
     border-radius: 10px;
     color: #fff;
     margin-bottom: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .add-member h2 {
@@ -302,6 +304,11 @@ button:hover {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
+#team_member{
+    margin: 50px 10px 15px 10px;
+    font-size: 2rem;
+}
+
 /* Completed Tasks Section */
 .completed-tasks {
     background-color: var(--background-dark);
@@ -369,7 +376,10 @@ button:hover {
     }
     
     
-
+    .add-member{
+        margin-left: 14%;
+        margin-right: 14%;
+    }
     .members-grid, .battle-cards {
         flex-direction: column;
         align-items: center;
@@ -382,6 +392,10 @@ button:hover {
 
 /* For smaller tablets and large phones */
 @media screen and (max-width: 768px) {
+    .add-member{
+        margin-left: 4%;
+        margin-right: 4%;
+    }
     .navbar {
         width: 180px; /* Smaller nav */
     }

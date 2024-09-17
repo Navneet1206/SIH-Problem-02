@@ -14,9 +14,9 @@
 
 <body>
 
-     <!-- ================================common Start================== -->
+    <!-- ================================common Start================== -->
 
-     <nav class="sidebar" id="sidebar">
+    <nav class="sidebar" id="sidebar">
         <div class="top__menu">
             <h2 class="logo" id="logo">Waste-Worrier</h2>
             <span class="toggle-btn" onclick=toggleSidebar() id="toggle-btn">
@@ -82,11 +82,14 @@
             <!-- Team Lobby Header -->
             <section class="team-header">
                 <h1 class="title" data-aos="fade-down">Team Lobby</h1>
-                <p class="description" data-aos="fade-up">Form your team, track your progress, and compete for the top ranks! Use your unique team ID to access the game.</p>
+                <p class="description" data-aos="fade-up">Form your team, track your progress, and compete for the top
+                    ranks! Use your unique team ID to access the game.</p>
                 <button onclick="showMoreInfo('teamLobbyInfo')">Read More</button>
-                <p id="teamLobbyInfo" style="display:none;">In this section, you can view your team's overall performance, track progress, and strategize for upcoming events. Make sure your team stays active to climb the rankings!</p>
+                <p id="teamLobbyInfo" style="display:none;">In this section, you can view your team's overall
+                    performance, track progress, and strategize for upcoming events. Make sure your team stays active to
+                    climb the rankings!</p>
             </section>
-    
+
             <!-- Team Stats Section -->
             <section class="team-stats" data-aos="zoom-in">
                 <div class="stat-card">
@@ -111,136 +114,147 @@
                 <form id="addMemberForm">
                     <label for="uid">Enter UID:</label>
                     <input type="text" id="uid" name="uid" placeholder="Enter team member's UID" required>
-                    
+
                     <label for="name">Member Name:</label>
                     <input type="text" id="name" name="name" placeholder="Enter team member's name" required>
-                    
+
                     <label for="profession">Profession:</label>
-                    <input type="text" id="profession" name="profession" placeholder="Enter profession (e.g., Doctor, Engineer)" required>
-                    
+                    <input type="text" id="profession" name="profession"
+                        placeholder="Enter profession (e.g., Doctor, Engineer)" required>
+
                     <label for="location">Location:</label>
-                    <input type="text" id="location" name="location" placeholder="Enter team member's location" required>
-                    
+                    <input type="text" id="location" name="location" placeholder="Enter team member's location"
+                        required>
+
                     <button type="submit" onclick="addMember()">Request to Join</button>
                 </form>
                 <button onclick="showMoreInfo('addMemberInfo')">Read More</button>
-                <p id="addMemberInfo" style="display:none;">Use this form to add new team members to your group. Each member must have a unique UID. Once they join, you can view their details in the Team Members section below.</p>
+                <p id="addMemberInfo" style="display:none;">Use this form to add new team members to your group. Each
+                    member must have a unique UID. Once they join, you can view their details in the Team Members
+                    section below.</p>
             </section>
-    
+
 
 
             <!-- Team Members Section -->
             <section class="team-members" data-aos="fade-left">
-                <h2>Team Members</h2>
+                <h2 id="team_member"><center>Team Members</center></h2>
                 <div class="members-grid">
                     <!-- Team members dynamically populated here -->
                 </div>
                 <button onclick="showMoreInfo('teamMembersInfo')">Read More</button>
-                <p id="teamMembersInfo" style="display:none;">This section displays the list of all current team members, including their names, professions, and locations. Make sure to keep your team engaged for better results in upcoming battles!</p>
+                <p id="teamMembersInfo" style="display:none;">This section displays the list of all current team
+                    members, including their names, professions, and locations. Make sure to keep your team engaged for
+                    better results in upcoming battles!</p>
             </section>
-    
-            
+
+
             <!-- Battle Area Section -->
             <!-- Upcoming Battles Section -->
-  <section class="upcoming-events">
-    <h2 class="section-title">Upcoming Battles</h2>
-    <div class="events-grid">
-      <div class="event-card">
-        <img src="/images/event1.jpg" alt="Event 1" />
-        <h3>Waste Cleanup Marathon</h3>
-        <p>Join us for a 5k marathon focused on cleaning up the community. Prizes and recognition for top performers!</p>
-        <button class="read-more-btn">Read More</button>
-      </div>
-      <div class="event-card">
-        <img src="/images/event2.jpg" alt="Event 2" />
-        <h3>Recycling Workshop</h3>
-        <p>Learn the best practices for recycling and how you can make a difference in reducing waste.</p>
-        <button class="read-more-btn">Read More</button>
-      </div>
-      <div class="event-card">
-        <img src="/images/event3.jpg" alt="Event 3" />
-        <h3>Eco-Friendly Hackathon</h3>
-        <p>A hackathon focused on creating eco-friendly tech solutions. Open to all developers and enthusiasts.</p>
-        <button class="read-more-btn">Read More</button>
-      </div>
-    </div>
-  </section>
+            <section class="upcoming-events">
+                <h2 class="section-title">Upcoming Battles</h2>
+                <div class="events-grid">
+                    <div class="event-card">
+                        <img src="/images/event1.jpg" alt="Event 1" />
+                        <h3>Waste Cleanup Marathon</h3>
+                        <p>Join us for a 5k marathon focused on cleaning up the community. Prizes and recognition for
+                            top performers!</p>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                    <div class="event-card">
+                        <img src="/images/event2.jpg" alt="Event 2" />
+                        <h3>Recycling Workshop</h3>
+                        <p>Learn the best practices for recycling and how you can make a difference in reducing waste.
+                        </p>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                    <div class="event-card">
+                        <img src="/images/event3.jpg" alt="Event 3" />
+                        <h3>Eco-Friendly Hackathon</h3>
+                        <p>A hackathon focused on creating eco-friendly tech solutions. Open to all developers and
+                            enthusiasts.</p>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                </div>
+            </section>
 
-  <!-- Completed Tasks Section -->
-  <section class="completed-tasks">
-    <h2 class="section-title">Completed Tasks</h2>
-    <div class="tasks-grid">
-      <div class="task-card">
-        <h3>Beach Cleanup Drive</h3>
-        <p>Successfully removed over 500 kg of waste from the coastline.</p>
-      </div>
-      <div class="task-card">
-        <h3>City Park Recycling Campaign</h3>
-        <p>Installed new recycling bins in 10 parks across the city and educated residents about proper waste disposal.</p>
-      </div>
-      <div class="task-card">
-        <h3>Eco-Awareness Webinar</h3>
-        <p>Hosted a virtual event attended by over 1,000 participants, raising awareness about sustainable practices.</p>
-      </div>
-    </div>
-  </section>
+            <!-- Completed Tasks Section -->
+            <section class="completed-tasks">
+                <h2 class="section-title">Completed Tasks</h2>
+                <div class="tasks-grid">
+                    <div class="task-card">
+                        <h3>Beach Cleanup Drive</h3>
+                        <p>Successfully removed over 500 kg of waste from the coastline.</p>
+                    </div>
+                    <div class="task-card">
+                        <h3>City Park Recycling Campaign</h3>
+                        <p>Installed new recycling bins in 10 parks across the city and educated residents about proper
+                            waste disposal.</p>
+                    </div>
+                    <div class="task-card">
+                        <h3>Eco-Awareness Webinar</h3>
+                        <p>Hosted a virtual event attended by over 1,000 participants, raising awareness about
+                            sustainable practices.</p>
+                    </div>
+                </div>
+            </section>
         </section>
         <footer>
             <p>&copy; 2023 EcoWarriors</p>
             <p style="color: rgba(0, 0, 0, 0.4); font-size: 11px;">developed by team VyomX</p>
         </footer>
     </main>
-    
-    
+
+
 
     <!-- footer -->
 
 
     <script>
-   const membersGrid = document.querySelector('.members-grid');
-const battleCards = document.querySelector('.battle-cards');
+        const membersGrid = document.querySelector('.members-grid');
+        const battleCards = document.querySelector('.battle-cards');
 
-// Example team members
-const teamMembers = [
-  { name: 'John', age: 28, profession: 'Engineer', UID: 'UID001', place: 'New York' },
-  { name: 'Sarah', age: 25, profession: 'Doctor', UID: 'UID002', place: 'London' },
-  { name: 'Mike', age: 30, profession: 'Designer', UID: 'UID003', place: 'Paris' }
-];
+        // Example team members
+        const teamMembers = [
+            { name: 'John', age: 28, profession: 'Engineer', UID: 'UID001', place: 'New York' },
+            { name: 'Sarah', age: 25, profession: 'Doctor', UID: 'UID002', place: 'London' },
+            { name: 'Mike', age: 30, profession: 'Designer', UID: 'UID003', place: 'Paris' }
+        ];
 
-// Example battles
-const upcomingBattles = [
-  { title: 'District Clean-up Challenge', time: 'Tomorrow 2 PM' },
-  { title: 'City Waste Segregation Battle', time: 'Next Week' }
-];
+        // Example battles
+        const upcomingBattles = [
+            { title: 'District Clean-up Challenge', time: 'Tomorrow 2 PM' },
+            { title: 'City Waste Segregation Battle', time: 'Next Week' }
+        ];
 
-// Populate team members dynamically
-teamMembers.forEach(member => {
-  const memberCard = document.createElement('div');
-  memberCard.classList.add('member-card');
-  memberCard.innerHTML = `
+        // Populate team members dynamically
+        teamMembers.forEach(member => {
+            const memberCard = document.createElement('div');
+            memberCard.classList.add('member-card');
+            memberCard.innerHTML = `
     <h3>${member.name}</h3>
     <p>UID: ${member.UID}</p>
     <p>Profession: ${member.profession}</p>
     <p>Location: ${member.place}</p>
   `;
-  membersGrid.appendChild(memberCard);
-});
+            membersGrid.appendChild(memberCard);
+        });
 
-// Populate upcoming battles dynamically
-upcomingBattles.forEach(battle => {
-  const battleCard = document.createElement('div');
-  battleCard.classList.add('battle-card');
-  battleCard.innerHTML = `
+        // Populate upcoming battles dynamically
+        upcomingBattles.forEach(battle => {
+            const battleCard = document.createElement('div');
+            battleCard.classList.add('battle-card');
+            battleCard.innerHTML = `
     <h3>${battle.title}</h3>
     <p>${battle.time}</p>
   `;
-  battleCards.appendChild(battleCard);
-});
+            battleCards.appendChild(battleCard);
+        });
 
-function showMoreInfo(sectionId) {
-        const section = document.getElementById(sectionId);
-        section.style.display = section.style.display === 'none' ? 'block' : 'none';
-    }
+        function showMoreInfo(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.style.display = section.style.display === 'none' ? 'block' : 'none';
+        }
     </script>
     <script src="/Scripts/main.js"></script>
 
