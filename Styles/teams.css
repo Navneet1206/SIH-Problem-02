@@ -235,6 +235,118 @@ button:hover {
     background-color: #45a049;
 }
 
+/* Upcoming Events Section */
+.upcoming-events {
+    background-color: var(--background-dark);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--secondary-hover-clr);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.event-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-time), background-color var(--transition-time);
+    text-align: center;
+}
+
+.event-card img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+.event-card h3 {
+    font-size: 1.5rem;
+    color: var(--white-clr);
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    color: var(--secondary-text-clr);
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.read-more-btn {
+    background-color: var(--secondary-hover-clr);
+    color: var(--background-dark);
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-time);
+}
+
+.read-more-btn:hover {
+    background-color: var(--white-clr);
+    color: var(--background-dark);
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Completed Tasks Section */
+.completed-tasks {
+    background-color: var(--background-dark);
+    padding: 40px;
+    border-radius: var(--border-radius);
+}
+
+.tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.task-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: transform var(--transition-time), background-color var(--transition-time);
+}
+
+.task-card h3 {
+    font-size: 1.5rem;
+    color: var(--white-clr);
+    margin-bottom: 10px;
+}
+
+.task-card p {
+    font-size: 1rem;
+    color: var(--secondary-text-clr);
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .events-grid, .tasks-grid {
+        grid-template-columns: 1fr; /* Stack cards on mobile */
+    }
+}
+
+
 /* Media Queries */
 
 /* For tablets (portrait orientation) */

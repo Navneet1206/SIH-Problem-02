@@ -127,6 +127,8 @@
                 <p id="addMemberInfo" style="display:none;">Use this form to add new team members to your group. Each member must have a unique UID. Once they join, you can view their details in the Team Members section below.</p>
             </section>
     
+
+
             <!-- Team Members Section -->
             <section class="team-members" data-aos="fade-left">
                 <h2>Team Members</h2>
@@ -137,15 +139,51 @@
                 <p id="teamMembersInfo" style="display:none;">This section displays the list of all current team members, including their names, professions, and locations. Make sure to keep your team engaged for better results in upcoming battles!</p>
             </section>
     
+            
             <!-- Battle Area Section -->
-            <section class="battle-area" data-aos="fade-right">
-                <h2>Upcoming Battles</h2>
-                <div class="battle-cards">
-                    <!-- Upcoming battles dynamically populated here -->
-                </div>
-                <button onclick="showMoreInfo('battleAreaInfo')">Read More</button>
-                <p id="battleAreaInfo" style="display:none;">Stay prepared for upcoming battles by keeping an eye on this section. Each event will challenge your team's waste management skills and help improve your ranking.</p>
-            </section>
+            <!-- Upcoming Battles Section -->
+  <section class="upcoming-events">
+    <h2 class="section-title">Upcoming Battles</h2>
+    <div class="events-grid">
+      <div class="event-card">
+        <img src="/images/event1.jpg" alt="Event 1" />
+        <h3>Waste Cleanup Marathon</h3>
+        <p>Join us for a 5k marathon focused on cleaning up the community. Prizes and recognition for top performers!</p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+      <div class="event-card">
+        <img src="/images/event2.jpg" alt="Event 2" />
+        <h3>Recycling Workshop</h3>
+        <p>Learn the best practices for recycling and how you can make a difference in reducing waste.</p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+      <div class="event-card">
+        <img src="/images/event3.jpg" alt="Event 3" />
+        <h3>Eco-Friendly Hackathon</h3>
+        <p>A hackathon focused on creating eco-friendly tech solutions. Open to all developers and enthusiasts.</p>
+        <button class="read-more-btn">Read More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Completed Tasks Section -->
+  <section class="completed-tasks">
+    <h2 class="section-title">Completed Tasks</h2>
+    <div class="tasks-grid">
+      <div class="task-card">
+        <h3>Beach Cleanup Drive</h3>
+        <p>Successfully removed over 500 kg of waste from the coastline.</p>
+      </div>
+      <div class="task-card">
+        <h3>City Park Recycling Campaign</h3>
+        <p>Installed new recycling bins in 10 parks across the city and educated residents about proper waste disposal.</p>
+      </div>
+      <div class="task-card">
+        <h3>Eco-Awareness Webinar</h3>
+        <p>Hosted a virtual event attended by over 1,000 participants, raising awareness about sustainable practices.</p>
+      </div>
+    </div>
+  </section>
         </section>
         <footer>
             <p>&copy; 2023 EcoWarriors</p>
