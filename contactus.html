@@ -88,65 +88,81 @@
 
 
     <main class="content">
-        <section class="contact-us-page">
-            <!-- Contact Info Section -->
-            <section class="contact-info">
-              <h2>Contact Us</h2>
-              <p>If you have any questions, feedback, or inquiries, feel free to get in touch with us through the contact form or the details below.</p>
-              
-              <div class="contact-details">
-                <div class="contact-item">
-                  <h3>Email Us</h3>
-                  <p><a href="mailto:info@wastemanagement.com">info@wastemanagement.com</a></p>
-                </div>
-                <div class="contact-item">
-                  <h3>Call Us</h3>
-                  <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                </div>
-                <div class="contact-item">
-                  <h3>Our Address</h3>
-                  <p>123 Waste Management Lane, Green City, Earth</p>
-                </div>
-              </div>
-            </section>
-          
-            <!-- Contact Form Section -->
-            <section class="contact-form">
-              <h2>Send Us a Message</h2>
-              <form action="submit-contact-form.php" method="POST">
-                <div class="form-group">
-                  <label for="name">Your Name</label>
+
+        <section class="contact" id="contact">
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you!</p>
+            <div class="contact-container">
+              <div class="contact-form">
+                <form>
+                  <label for="name">Name:</label>
                   <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                  <label for="email">Your Email</label>
+                  <label for="email">Email:</label>
                   <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                  <label for="message">Your Message</label>
-                  <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-              </form>
-            </section>
-          
-            <!-- Social Media Section -->
-            <section class="social-media">
-              <h2>Follow Us</h2>
-              <div class="social-icons">
-                <a href="#" target="_blank"><img src="/images/facebook-icon.png" alt="Facebook"></a>
-                <a href="#" target="_blank"><img src="/images/twitter-icon.png" alt="Twitter"></a>
-                <a href="#" target="_blank"><img src="/images/linkedin-icon.png" alt="LinkedIn"></a>
-                <a href="#" target="_blank"><img src="/images/instagram-icon.png" alt="Instagram"></a>
+                  <label for="message">Message:</label>
+                  <textarea id="message" name="message" required></textarea>
+                  <button type="submit">Send Message</button>
+                </form>
               </div>
-            </section>
+              <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Email: <a href="mailto:info@ecowarriors.org">info@ecowarriors.org</a></p>
+                <p>Phone: +1 555 555 5555</p>
+                <p>Address: 123 Main St, Anytown, USA 12345</p>
+                <p>Follow us on social media:</p>
+                <ul>
+                    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+
+                    
+                </ul>
+              </div>
+            </div>
           </section>
           
-
-        <footer>
-            <p>&copy; 2023 EcoWarriors </p>
-            <p style="color: rgb(0, 0, 0, 0.4); font-size: 11px;">developed by team VyomX</p>
-        </footer>
+       
+<!-- ============= Footer =============== -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>We're a community of eco-warriors dedicated to protecting our planet.</p>
+        <ul>
+          <li><a href="#">Our Mission</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Get Involved</h3>
+        <ul>
+          <li><a href="#">Volunteer</a></li>
+          <li><a href="#">Donate</a></li>
+          <li><a href="#">Join Our Newsletter</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Stay Informed</h3>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Newsletters</a></li>
+          <li><a href="#">Press Releases</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2024 Eco Warriors. All rights reserved.
+    </div>
+  </footer>
 
     </main>
 

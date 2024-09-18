@@ -7,25 +7,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Waste Management Platform</title>
 
-    <!-- scroll animation AOS  -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-
     <!-- css -->
     <link rel="stylesheet" href="/Styles/style.css">
-    <link rel="stylesheet" href="/Styles/index.css">
     <link rel="stylesheet" href="/Styles/rewards.css">
-
-    <!-- scripts -->
-    <script src="/Scripts/tilt.js"></script>
 
 </head>
 
 <body>
 
-    <!-- ================================common Start================== -->
+     <!-- ================================common Start================== -->
 
-    <nav class="sidebar" id="sidebar">
+     <nav class="sidebar" id="sidebar">
         <div class="top__menu">
             <h2 class="logo" id="logo">Waste-Worrier</h2>
             <span class="toggle-btn" onclick=toggleSidebar() id="toggle-btn">
@@ -75,73 +67,131 @@
             <a href="profile.html"><i class="fas fa-user"></i><span class="nav-text">Profile</span></a>
         </div>
     </div>
-
-    <!-- <main class="content">
-        Main content Start at here
-        
-        <footer>
-            <p>&copy; 2023 EcoWarriors </p>
-            <p style="color: rgb(0, 0, 0, 0.4); font-size: 11px;">developed by team VyomX</p>
-        </footer>
-    </main> -->
+    </main> 
     <!-- ==================Common End==================== -->
 
 
-
     <main class="content">
-       
+        <div class="header">
+            <h1>Rewards & Achievements</h1>
+        </div> 
         
-        <section class="rewards">
-            <h2>Rewards</h2>
-            <p>Earn points and redeem rewards for your eco-friendly actions!</p>
-            <div class="rewards-container">
-              <div class="reward-card">
-                <h3>Green Thumb</h3>
-                <p>100 points</p>
-                <img src="green-thumb.png" alt="Green Thumb">
-              </div>
-              <div class="reward-card">
-                <h3>Eco-Warrior</h3>
-                <p>500 points</p>
-                <img src="eco-warrior.png" alt="Eco-Warrior">
-              </div>
-              <div class="reward-card">
-                <h3>Sustainability Champion</h3>
-                <p>1000 points</p>
-                <img src="sustainability-champion.png" alt="Sustainability Champion">
-              </div>
-            </div>
-            <button>Redeem Points</button>
-          </section>
-          
-          
+        <section class="rewards-main">
 
-        <footer>
-            <p>&copy; 2023 EcoWarriors </p>
-            <p style="color: rgb(0, 0, 0, 0.4); font-size: 11px;">developed by team VyomX</p>
-        </footer>
+          
+        <section class="points-section">
+            <h2>Your Points: <span id="user-points">1500</span></h2>
+            <button class="redeem-button" onclick="redeemPoints()">Redeem Points</button>
+        </section>
+        
+        
+        <section class="rewards-section">
+          <h2>Available Rewards</h2>
+          <div class="rewards-container">
+              <div class="reward-card">
+                  <h3>Eco-Friendly Product</h3>
+                  <p>500 Points</p>
+                  <button class="claim-button" onclick="claimReward('Eco-Friendly Product', 500)">Claim</button>
+              </div>
+              <div class="reward-card">
+                  <h3>Local Business Discount</h3>
+                  <p>1000 Points</p>
+                  <button class="claim-button" onclick="claimReward('Local Business Discount', 1000)">Claim</button>
+              </div>
+              <div class="reward-card">
+                  <h3>Donation to Environmental Cause</h3>
+                  <p>2000 Points</p>
+                  <button class="claim-button" onclick="claimReward('Donation to Environmental Cause', 2000)">Claim</button>
+              </div>
+          </div>
+      </section>
+      
+
+        <section class="redeemed-section">
+            <h2>Redeemed Rewards</h2>
+            <ul id="redeemed-list">
+                <li>Eco-Friendly Product - 500 Points</li>
+            </ul>
+        </section>
+
+        <section class="leaderboard-section">
+            <h2>Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Team Name</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Green Warriors</td>
+                        <td>3000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Eco Avengers</td>
+                        <td>2500</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Waste Busters</td>
+                        <td>2000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+
+
+  <!-- ============= Footer =============== -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>We're a community of eco-warriors dedicated to protecting our planet.</p>
+        <ul>
+          <li><a href="#">Our Mission</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Get Involved</h3>
+        <ul>
+          <li><a href="#">Volunteer</a></li>
+          <li><a href="#">Donate</a></li>
+          <li><a href="#">Join Our Newsletter</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Stay Informed</h3>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Newsletters</a></li>
+          <li><a href="#">Press Releases</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2024 Eco Warriors. All rights reserved.
+    </div>
+  </footer>
 
     </main>
 
     <!-- footer -->
-    
-
-    <script type="text/javascript">
-        VanillaTilt.init(document.querySelector(".hero title"), {
-            max: 25,
-            speed: 400
-        });
-        //It also supports NodeList
-        VanillaTilt.init(document.querySelectorAll(".hero h1"));
-     
-    </script>
-
-    <!-- ANIMATE ON SCROLL -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-
+     <!-- scripts -->
     <script src="/Scripts/main.js"></script>
 
 </body>

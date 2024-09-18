@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Waste Management Platform</title>
+    <!-- scroll animation AOS  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
     <!-- css -->
@@ -86,104 +88,70 @@
 
     <main class="content">
 
-        <section class="profile-page">
-            <!-- User Info Section -->
-            <section class="user-info">
-              <div class="user-photo">
-                <img src="/images/profile-picture.jpg" alt="User Photo">
-              </div>
-              <div class="user-details">
-                <h2>John Doe</h2>
-                <p>UID: 12345ABC</p> <!-- UID added -->
-                <p>Rank: Captain</p>
-                <p>Location: Green City</p>
-                <p>Member since: January 2023</p> <!-- Added more profile info -->
-                <button class="edit-profile-btn">Edit Profile</button>
-              </div>
-            </section>
-          
-            <!-- Bio Section -->
-            <section class="user-bio">
-              <h2>About John</h2>
-              <p>John is a passionate environmentalist who has been actively contributing to the community by participating in various waste management and recycling campaigns. His primary focus is on making Green City a zero-waste community by promoting proper waste segregation and disposal techniques. John loves to share his knowledge with others and frequently hosts workshops on recycling best practices.</p>
-            </section>
-          
-            <!-- Team Stats Section -->
-            <section class="team-stats-section">
-              <h2 class="section-title">Team Stats</h2>
-              <div class="team-stats-grid">
-                <div class="stat-card">
-                  <h3>Points Collected</h3>
-                  <p>2,350</p>
-                </div>
-                <div class="stat-card">
-                  <h3>Waste Segregated (kg)</h3>
-                  <p>150</p>
-                </div>
-                <div class="stat-card">
-                  <h3>Recycling Rate</h3>
-                  <p>85%</p>
-                </div>
-              </div>
-            </section>
-          
-            <!-- Achievements Section -->
-            <section class="achievements-section">
-              <h2 class="section-title">Badges & Achievements</h2>
-              <div class="badges-grid">
-                <div class="badge-card">
-                  <img src="/images/badge1.png" alt="Badge 1">
-                  <p>Waste Warrior</p>
-                  <span class="badge-date">Awarded: March 2024</span> <!-- Added date -->
-                </div>
-                <div class="badge-card">
-                  <img src="/images/badge2.png" alt="Badge 2">
-                  <p>Recycling Pro</p>
-                  <span class="badge-date">Awarded: January 2024</span>
-                </div>
-                <div class="badge-card">
-                  <img src="/images/badge3.png" alt="Badge 3">
-                  <p>Community Leader</p>
-                  <span class="badge-date">Awarded: December 2023</span>
-                </div>
-              </div>
-            </section>
-          
-            <!-- Completed Tasks Section -->
-            <section class="completed-tasks-section">
-              <h2 class="section-title">Completed Tasks</h2>
-              <div class="tasks-grid">
-                <div class="task-card">
-                  <h3>Community Clean-Up Drive</h3>
-                  <p>Completed on: 12th March 2024</p>
-                  <p>John led a successful clean-up drive that involved over 50 community members.</p>
-                </div>
-                <div class="task-card">
-                  <h3>Plastic Recycling Workshop</h3>
-                  <p>Completed on: 25th February 2024</p>
-                  <p>John hosted a workshop on how to recycle plastic waste effectively.</p>
-                </div>
-                <div class="task-card">
-                  <h3>Neighborhood Waste Segregation Campaign</h3>
-                  <p>Completed on: 10th January 2024</p>
-                  <p>John organized a door-to-door campaign to raise awareness about waste segregation.</p>
-                </div>
-              </div>
-            </section>
-          </section>
-          
-         
-          
 
 
-        <footer>
-            <p>&copy; 2023 EcoWarriors </p>
-            <p style="color: rgb(0, 0, 0, 0.4); font-size: 11px;">developed by team VyomX</p>
-        </footer>
+<!-- ============= Footer =============== -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>We're a community of eco-warriors dedicated to protecting our planet.</p>
+        <ul>
+          <li><a href="#">Our Mission</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Get Involved</h3>
+        <ul>
+          <li><a href="#">Volunteer</a></li>
+          <li><a href="#">Donate</a></li>
+          <li><a href="#">Join Our Newsletter</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Stay Informed</h3>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Newsletters</a></li>
+          <li><a href="#">Press Releases</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2024 Eco Warriors. All rights reserved.
+    </div>
+  </footer>
 
     </main>
 
-    
+    <!-- footer -->
+
+
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".hero title"), {
+            max: 25,
+            speed: 400
+        });
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".hero h1"));
+
+    </script>
+
+    <!-- ANIMATE ON SCROLL -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <script src="/Scripts/main.js"></script>
 

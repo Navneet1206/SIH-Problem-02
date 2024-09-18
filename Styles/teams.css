@@ -1,17 +1,16 @@
 :root {
-    --white-clr: #ffffff; /* White */
-    --secondary-hover-clr: #ffd700; /* Golden hover */
-    --secondary-text-clr: #e0e0e0; /* Light gray */
-    --primary-dark: #333333; /* Dark background for progress bars */
-    --background-dark: #1a1a1d; /* Main background */
-    --card-bg: rgba(255, 255, 255, 0.1); /* Transparent card background */
+    --navbar-color: #0F4D1C;
+    --primary-green-color: #0F4D1C;
+    --secondary-green-color: #408D4C;
+    --primary-blue-color: #2469A2;
     --border-radius: 10px;
     --transition-time: 0.3s; /* Smooth transition */
+    --card-bg-color: rgba(143, 237, 170, 0.521);
 }
 
 body {
-    background-color: var(--background-dark);
-    color: var(--white-clr);
+    /* background-color: var(--bl) */
+    color: var(--white-color);
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -21,7 +20,7 @@ body {
 /* Side Nav */
 .navbar {
     width: 250px;
-    background-color: var(--primary-dark);
+    background-color: var(--navbar-color);
     height: 100vh;
     padding: 20px;
     box-sizing: border-box;
@@ -31,7 +30,7 @@ body {
 }
 
 .navbar a {
-    color: var(--white-clr);
+    color: var(--white-color);
     padding: 10px 15px;
     text-decoration: none;
     display: block;
@@ -39,8 +38,8 @@ body {
 }
 
 .navbar a:hover {
-    background-color: var(--secondary-hover-clr);
-    color: var(--background-dark);
+    background-color: var(--secondary-green-color);
+    color: var(--black-color);
     transition: var(--transition-time);
 }
 
@@ -54,7 +53,7 @@ body {
 .teams-page {
     background: url('/images/battle-background.jpg') no-repeat center center;
     background-size: cover;
-    color: var(--white-clr);
+    color: var(--white-color);
     padding: 40px;
     text-align: center;
 }
@@ -65,14 +64,14 @@ body {
 
 .title {
     font-size: 2.5rem;
-    color: var(--secondary-hover-clr);
+    color: var(--secondary-green-color);
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 
 .description {
     font-size: 1.2rem;
-    color: var(--secondary-text-clr);
+    color: var(--primary-blue-color); /* Keeping this as is since it's not defined in the new root */
 }
 
 .team-stats {
@@ -83,7 +82,7 @@ body {
 }
 
 .stat-card {
-    background-color: var(--card-bg);
+    background-color: var(--card-bg-color); /* Keeping this as is since it's not defined in the new root */
     padding: 20px;
     border-radius: var(--border-radius);
     transition: background-color var(--transition-time), transform var(--transition-time);
@@ -91,27 +90,27 @@ body {
 }
 
 .stat-card h2, .stat-card p {
-    color: var(--white-clr);
+    color: var(--primary-blue-color);
     margin-bottom: 10px;
 }
 
 .stat-card:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(78, 236, 81, 0.486);
     transform: translateY(-5px);
 }
 
 .progress-bar {
-    background-color: var(--primary-dark);
+    background-color: var(--white-color);
     border-radius: var(--border-radius);
     overflow: hidden;
     height: 20px;
 }
 
 .progress {
-    background-color: var(--secondary-hover-clr);
+    background-color: var(--primary-blue-color);
     height: 100%;
     text-align: center;
-    color: var(--white-clr);
+    color: var(--white-color);
 }
 
 .team-members {
@@ -125,11 +124,11 @@ body {
 }
 
 .member-card {
-    background-color: var(--card-bg);
-    border: 2px solid var(--secondary-hover-clr);
+    background-color: var(--card-bg-color); /* Keeping this as is since it's not defined in the new root */
+    border: 2px solid var(--primary-blue-color);
     border-radius: var(--border-radius);
     padding: 20px;
-    color: var(--white-clr);
+    color: var(--primary-green-color);
     text-align: center;
     transition: transform var(--transition-time);
 }
@@ -150,7 +149,7 @@ body {
 }
 
 .battle-card {
-    background-color: rgba(0, 0, 0, 0.8);
+    /* background-color: var(--card-bg-color); */
     padding: 20px;
     border-radius: var(--border-radius);
     width: 30%;
@@ -159,7 +158,7 @@ body {
 }
 
 .battle-card h3 {
-    color: var(--white-clr);
+    color: var(--white-color);
 }
 
 .battle-card:hover {
@@ -167,8 +166,8 @@ body {
 }
 
 button {
-    background-color: #4caf50;
-    color: white;
+    background-color: var(--primary-green-color);
+    color: var(--white-color);
     border: none;
     padding: 10px 15px;
     margin-top: 15px;
@@ -178,7 +177,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: var(--secondary-green-color);
 }
 
 /* Info Toggle Section */
@@ -191,10 +190,10 @@ button:hover {
 
 /* Add Member Section */
 .add-member {
-    background: rgba(0, 0, 0, 0.4);
+    background: var(--card-bg-color);
     padding: 20px;
     border-radius: 10px;
-    color: #fff;
+    color: var(--white-color);
     margin-bottom: 30px;
     margin-left: 20%;
     margin-right: 20%;
@@ -224,8 +223,8 @@ button:hover {
 }
 
 .add-member button {
-    background-color: #4caf50;
-    color: #fff;
+    background-color: var(--primary-green-color);
+    color: var(--white-color);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -234,12 +233,12 @@ button:hover {
 }
 
 .add-member button:hover {
-    background-color: #45a049;
+    background-color: var(--secondary-green-color);
 }
 
 /* Upcoming Events Section */
 .upcoming-events {
-    background-color: var(--background-dark);
+    background-color: var(--black-color);
     padding: 40px;
     border-radius: var(--border-radius);
     margin-bottom: 40px;
@@ -247,7 +246,7 @@ button:hover {
 
 .section-title {
     font-size: 2.5rem;
-    color: var(--secondary-hover-clr);
+    color: var(--secondary-green-color);
     text-align: center;
     margin-bottom: 30px;
 }
@@ -259,7 +258,7 @@ button:hover {
 }
 
 .event-card {
-    background-color: var(--card-bg);
+    background-color: rgba(255, 255, 255, 0.1); /* Keeping this as is since it's not defined in the new root */
     padding: 20px;
     border-radius: var(--border-radius);
     transition: transform var(--transition-time), background-color var(--transition-time);
@@ -274,19 +273,19 @@ button:hover {
 
 .event-card h3 {
     font-size: 1.5rem;
-    color: var(--white-clr);
+    color: var(--white-color);
     margin-bottom: 10px;
 }
 
 .event-card p {
-    color: var(--secondary-text-clr);
+    color: #e0e0e0; /* Keeping this as is since it's not defined in the new root */
     font-size: 1rem;
     margin-bottom: 15px;
 }
 
 .read-more-btn {
-    background-color: var(--secondary-hover-clr);
-    color: var(--background-dark);
+    background-color: var(--secondary-green-color);
+    color: var(--black-color);
     padding: 10px 20px;
     border: none;
     border-radius: var(--border-radius);
@@ -295,8 +294,8 @@ button:hover {
 }
 
 .read-more-btn:hover {
-    background-color: var(--white-clr);
-    color: var(--background-dark);
+    background-color: var(--white-color);
+    color: var(--black-color);
 }
 
 .event-card:hover {
@@ -304,14 +303,14 @@ button:hover {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
-#team_member{
+#team_member {
     margin: 50px 10px 15px 10px;
     font-size: 2rem;
 }
 
 /* Completed Tasks Section */
 .completed-tasks {
-    background-color: var(--background-dark);
+    background-color: var(--black-color);
     padding: 40px;
     border-radius: var(--border-radius);
 }
@@ -323,7 +322,7 @@ button:hover {
 }
 
 .task-card {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); /* Keeping this as is since it's not defined in the new root */
     padding: 20px;
     border-radius: var(--border-radius);
     text-align: center;
@@ -332,13 +331,13 @@ button:hover {
 
 .task-card h3 {
     font-size: 1.5rem;
-    color: var(--white-clr);
+    color: var(--white-color);
     margin-bottom: 10px;
 }
 
 .task-card p {
     font-size: 1rem;
-    color: var(--secondary-text-clr);
+    color: #e0e0e0; /* Keeping this as is since it's not defined in the new root */
 }
 
 .task-card:hover {
@@ -352,9 +351,6 @@ button:hover {
         grid-template-columns: 1fr; /* Stack cards on mobile */
     }
 }
-
-
-/* Media Queries */
 
 /* For tablets (portrait orientation) */
 @media screen and (max-width: 1024px) {
@@ -375,8 +371,7 @@ button:hover {
         width: 100%;
     }
     
-    
-    .add-member{
+    .add-member {
         margin-left: 14%;
         margin-right: 14%;
     }
@@ -392,7 +387,7 @@ button:hover {
 
 /* For smaller tablets and large phones */
 @media screen and (max-width: 768px) {
-    .add-member{
+    .add-member {
         margin-left: 4%;
         margin-right: 4%;
     }
@@ -407,7 +402,6 @@ button:hover {
 
     .content {
         padding: 10px;
-        
     }
 
     .team-header .title {
