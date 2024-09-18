@@ -1,0 +1,262 @@
+:root {
+    --white-clr: #ffffff; /* White */
+    --secondary-hover-clr: #ffd700; /* Golden hover */
+    --secondary-text-clr: #e0e0e0; /* Light gray */
+    --primary-dark: #333333; /* Dark background for progress bars */
+    --background-dark: #1a1a1d; /* Main background */
+    --card-bg: rgba(255, 255, 255, 0.1); /* Transparent card background */
+    --border-radius: 10px;
+    --transition-time: 0.3s; /* Smooth transition */
+}
+
+body {
+    background-color: var(--background-dark);
+    color: var(--white-clr);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex; /* To accommodate the side nav */
+}
+
+/* Side Nav */
+.navbar {
+    width: 250px;
+    background-color: var(--primary-dark);
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navbar a {
+    color: var(--white-clr);
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.navbar a:hover {
+    background-color: var(--secondary-hover-clr);
+    color: var(--background-dark);
+    transition: var(--transition-time);
+}
+
+.main-content {
+    margin-left: 250px; /* Space for the side nav */
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+/* Profile Page Layout */
+.profile-page {
+    padding: 40px;
+    color: var(--white-clr);
+}
+
+/* User Info Section */
+.user-info {
+    display: flex;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.user-photo img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid var(--secondary-hover-clr);
+}
+
+.user-details h2 {
+    font-size: 2rem;
+    color: var(--secondary-hover-clr);
+    margin-bottom: 10px;
+}
+
+.user-details p {
+    font-size: 1rem;
+    color: var(--secondary-text-clr);
+    margin-bottom: 10px;
+}
+
+.edit-profile-btn {
+    background-color: var(--secondary-hover-clr);
+    border: none;
+    color: var(--background-dark);
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.edit-profile-btn:hover {
+    background-color: var(--white-clr);
+    color: var(--background-dark);
+}
+
+/* User Bio Section */
+.user-bio {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 40px;
+}
+
+.user-bio h2 {
+    font-size: 1.8rem;
+    color: var(--secondary-hover-clr);
+    margin-bottom: 15px;
+}
+
+.user-bio p {
+    font-size: 1rem;
+    color: var(--secondary-text-clr);
+}
+
+/* Team Stats Section */
+.team-stats-section {
+    margin-bottom: 40px;
+}
+
+.team-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: transform var(--transition-time);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
+    font-size: 1.5rem;
+    color: var(--white-clr);
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 1.2rem;
+    color: var(--secondary-hover-clr);
+}
+
+/* Achievements Section */
+.achievements-section {
+    margin-bottom: 40px;
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.badge-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: transform var(--transition-time);
+}
+
+.badge-card img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.badge-card:hover {
+    transform: translateY(-5px);
+}
+
+.badge-card p {
+    font-size: 1rem;
+    color: var(--white-clr);
+}
+
+.badge-date {
+    font-size: 0.85rem;
+    color: var(--secondary-text-clr);
+}
+
+/* Completed Tasks Section */
+.completed-tasks-section {
+    margin-bottom: 40px;
+}
+
+.tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.task-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-time);
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+}
+
+.task-card h3 {
+    font-size: 1.4rem;
+    color: var(--white-clr);
+    margin-bottom: 10px;
+}
+
+.task-card p {
+    font-size: 1rem;
+    color: var(--secondary-text-clr);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .user-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-stats-grid, .badges-grid, .tasks-grid {
+        grid-template-columns: 1fr; /* Stack stats, badges, and tasks on mobile */
+    }
+
+    .stat-card, .badge-card, .task-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-details h2 {
+        font-size: 1.5rem;
+    }
+
+    .edit-profile-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .stat-card h3, .stat-card p, .badge-card p, .task-card h3, .task-card p {
+        font-size: 1rem;
+    }
+
+    .badge-card img {
+        width: 50px;
+    }
+}
