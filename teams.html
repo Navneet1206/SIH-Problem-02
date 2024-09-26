@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Waste Management Platform</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="/Styles/teams.css">
+
+</head>
+
+<body>
+
+    <!-- ================================common Start================== -->
+
+    <nav class="sidebar" id="sidebar">
+        <div class="top__menu">
+            <h2 class="logo" id="logo">Waste-Worrier</h2>
+            <span class="toggle-btn" onclick=toggleSidebar() id="toggle-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e8eaed">
+                    <path
+                        d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z" />
+                </svg>
+            </span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> <span class="link-text">Home</span></a></li>
+            <li class="active"><a href="teams.html" class="active"><i class="fas fa-users active"></i> <span class="link-text active">Teams</span></a></li>
+            <li><a href="ranking.html"><i class="fas fa-trophy"></i> <span class="link-text">Ranking System</span></a>
+            </li>
+            <li><a href="r_collection.html"><i class="fas fa-recycle"></i> <span class="link-text">Request
+                        Collection</span></a></li>
+            <li><a href="rewards.html"><i class="fas fa-gift"></i> <span class="link-text">Rewards</span></a></li>
+            <li><a href="donation.html"><i class="fas fa-donate"></i> <span class="link-text">Donate</span></a></li>
+            <li><a href="q_and_a.html"><i class="fas fa-question-circle"></i> <span class="link-text">Resources</span></a>
+            </li>
+            <!-- <li><a href="#"><i class="fas fa-globe"></i> <span class="link-text">Leaderboard</span></a></li> -->
+            <li><a href="/contactus.html"><i class="fas fa-envelope"></i> <span class="link-text">Contact Us</span></a>
+            </li>
+            <li><a href="profile.html"><i class="fas fa-user"></i> <span class="link-text">Profile</span></a></li>
+        </ul>
+    </nav>
+
+    <!-- Bottom Navigation Bar for Mobile -->
+    <div class="bottom-navbar" id="bottom-navbar">
+        <a href="index.html"><i class="fas fa-home"></i><span class="nav-text">Home</span></a>
+        <a href="teams.html" class="bottom-active"><i class="fas fa-users bottom-active"></i><span class="nav-text bottom-active">Teams</span></a>
+        <a href="ranking.html"><i class="fas fa-trophy"></i><span class="nav-text">Ranking</span></a>
+        <a href="rewards.html"><i class="fas fa-gift"></i><span class="nav-text">Rewards</span></a>
+
+        <!-- "More" button to show additional options -->
+        <a href="#" id="more-bottom-navbar"><i class="fas fa-ellipsis-h"></i><span class="nav-text">More</span></a>
+
+        <!-- Hidden items by default -->
+        <div id="more-items-bottom" class="more-items-bottom" style="display: none;">
+            <a href="r_collection.html"><i class="fas fa-recycle"></i><span class="nav-text">Request
+                    Collection</span></a>
+            <a href="donation.html"><i class="fas fa-donate"></i><span class="nav-text">Donate</span></a>
+            <a href="q_and_a.html"><i class="fas fa-question-circle"></i><span class="nav-text">Resources</span></a>
+            <!-- <a href="#"><i class="fas fa-globe"></i><span class="nav-text">Leaderboard</span></a> -->
+            <a href="/contactus.html"><i class="fas fa-envelope"></i> <span class="nav-text">Contact Us</span></a>
+            <a href="profile.html"><i class="fas fa-user"></i><span class="nav-text">Profile</span></a>
+        </div>
+    </div>
+
+    <!-- <main class="content">
+        Main content Start at here
+        
+        <footer>
+            <p>&copy; 2023 EcoWarriors </p>
+            <p style="color: rgb(0, 0, 0, 0.4); font-size: 11px;">developed by team VyomX</p>
+        </footer>
+    </main> -->
+    <!-- ==================Common End==================== -->
+
+    <main class="content">
+        <section class="teams-page">
+            <!-- Team Lobby Header -->
+            <section class="team-header">
+                <h1 class="title" data-aos="fade-down">Team Lobby</h1>
+                <p class="description" data-aos="fade-up">Form your team, track your progress, and compete for the top
+                    ranks! Use your unique team ID to access the game.</p>
+                <button onclick="showMoreInfo('teamLobbyInfo')">Read More</button>
+                <p id="teamLobbyInfo" style="display:none;">In this section, you can view your team's overall
+                    performance, track progress, and strategize for upcoming events. Make sure your team stays active to
+                    climb the rankings!</p>
+            </section>
+
+            <!-- Team Stats Section -->
+            <section class="team-stats" data-aos="zoom-in">
+                <div class="stat-card">
+                    <h2>Team UID: <span id="teamUID">#12345</span></h2>
+                    <p>Team Score: <span id="teamScore">1500 XP</span></p>
+                </div>
+                <div class="stat-card">
+                    <h2>Rank: <span id="teamRank">#12</span></h2>
+                    <p>Members: <span id="teamMembers">5 Players</span></p>
+                </div>
+                <div class="stat-card">
+                    <h2>Event Progress</h2>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;">75%</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Add Team Member Section -->
+            <section class="add-member" data-aos="fade-left">
+                <h2>Add a New Team Member</h2>
+                <form id="addMemberForm">
+                    <label for="uid">Enter UID:</label>
+                    <input type="text" id="uid" name="uid" placeholder="Enter team member's UID" required>
+
+                    <label for="name">Member Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter team member's name" required>
+
+                    <label for="profession">Profession:</label>
+                    <input type="text" id="profession" name="profession"
+                        placeholder="Enter profession (e.g., Doctor, Engineer)" required>
+
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" placeholder="Enter team member's location"
+                        required>
+
+                    <button type="submit" onclick="addMember()">Request to Join</button>
+                </form>
+                <button onclick="showMoreInfo('addMemberInfo')">Read More</button>
+                <p id="addMemberInfo" style="display:none;">Use this form to add new team members to your group. Each
+                    member must have a unique UID. Once they join, you can view their details in the Team Members
+                    section below.</p>
+            </section>
+
+
+
+            <!-- Team Members Section -->
+            <section class="team-members" data-aos="fade-left">
+                <h2 id="team_member"><center>Team Members</center></h2>
+                <div class="members-grid">
+                    <!-- Team members dynamically populated here -->
+                </div>
+                <button class="more-member-btn" onclick="showMoreInfo('teamMembersInfo')">Read More</button>
+                <p id="teamMembersInfo" style="display:none;">This section displays the list of all current team
+                    members, including their names, professions, and locations. Make sure to keep your team engaged for
+                    better results in upcoming battles!</p>
+            </section>
+
+
+            <!-- Battle Area Section -->
+            <!-- Upcoming Battles Section -->
+            <section class="upcoming-events">
+                <h2 class="section-title">Upcoming Battles</h2>
+                <div class="events-grid">
+                    <div class="event-card">
+                        <img src="https://media.istockphoto.com/id/843249732/photo/activist-sorting-paper-waste.jpg?s=612x612&w=0&k=20&c=obTiF9hSmGtfzBwgx9WIBtFusORnXYGmUeJQsXUd2Ls=" alt="Event 1" />
+                        <h3>Waste Cleanup Marathon</h3>
+                        <p>Join us for a 5k marathon focused on cleaning up the community. Prizes and recognition for
+                            top performers!</p>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                    <div class="event-card">
+                        <img src="https://media.slidesgo.com/storage/16628997/responsive-images/0-eco-recycling-workshop___media_library_original_1600_900.jpg" alt="Event 2" />
+                        <h3>Recycling Workshop</h3>
+                        <p>Learn the best practices for recycling and how you can make a difference in reducing waste.
+                        </p>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                    <div class="event-card">
+                        <img src="https://renouvo.net/wp-content/uploads/2024/02/what-does-eco-friendly-mean-new-cover-1536x864.jpg" alt="Event 3" />
+                        <h3>Eco-Friendly Hackathon</h3>
+                        <p>A hackathon focused on creating eco-friendly tech solutions. Open to all developers and
+                            enthusiasts.</p>
+                        <button class="read-more-btn">Read More</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Completed Tasks Section -->
+            <section class="completed-tasks">
+                <h2 class="section-title">Completed Tasks</h2>
+                <div class="tasks-grid">
+                    <div class="task-card">
+                        <h3>Beach Cleanup Drive</h3>
+                        <p>Successfully removed over 500 kg of waste from the coastline.</p>
+                    </div>
+                    <div class="task-card">
+                        <h3>City Park Recycling Campaign</h3>
+                        <p>Installed new recycling bins in 10 parks across the city and educated residents about proper
+                            waste disposal.</p>
+                    </div>
+                    <div class="task-card">
+                        <h3>Eco-Awareness Webinar</h3>
+                        <p>Hosted a virtual event attended by over 1,000 participants, raising awareness about
+                            sustainable practices.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- ============= Footer =============== -->
+        <footer class="footer">
+            <div class="footer-container">
+              <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We're a community of eco-warriors dedicated to protecting our planet.</p>
+                <ul>
+                  <li><a href="#">Our Mission</a></li>
+                  <li><a href="#">Our Team</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <h3>Get Involved</h3>
+                <ul>
+                  <li><a href="#">Volunteer</a></li>
+                  <li><a href="#">Donate</a></li>
+                  <li><a href="#">Join Our Newsletter</a></li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                  <li><a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                  <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                  <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <h3>Stay Informed</h3>
+                <ul>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Newsletters</a></li>
+                  <li><a href="#">Press Releases</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="copyright">
+              &copy; 2024 Eco Warriors. All rights reserved.
+            </div>
+          </footer>
+    </main>
+
+
+
+    <!-- footer -->
+
+
+    <script>
+        const membersGrid = document.querySelector('.members-grid');
+        const battleCards = document.querySelector('.battle-cards');
+
+        // Example team members
+        const teamMembers = [
+            { name: 'John', age: 28, profession: 'Engineer', UID: 'UID001', place: 'New York' },
+            { name: 'Sarah', age: 25, profession: 'Doctor', UID: 'UID002', place: 'London' },
+            { name: 'Mike', age: 30, profession: 'Designer', UID: 'UID003', place: 'Paris' }
+        ];
+
+        // Example battles
+        const upcomingBattles = [
+            { title: 'District Clean-up Challenge', time: 'Tomorrow 2 PM' },
+            { title: 'City Waste Segregation Battle', time: 'Next Week' }
+        ];
+
+        // Populate team members dynamically
+        teamMembers.forEach(member => {
+            const memberCard = document.createElement('div');
+            memberCard.classList.add('member-card');
+            memberCard.innerHTML = `
+    <h3>${member.name}</h3>
+    <p>UID: ${member.UID}</p>
+    <p>Profession: ${member.profession}</p>
+    <p>Location: ${member.place}</p>
+  `;
+            membersGrid.appendChild(memberCard);
+        });
+
+        // Populate upcoming battles dynamically
+        upcomingBattles.forEach(battle => {
+            const battleCard = document.createElement('div');
+            battleCard.classList.add('battle-card');
+            battleCard.innerHTML = `
+    <h3>${battle.title}</h3>
+    <p>${battle.time}</p>
+  `;
+            battleCards.appendChild(battleCard);
+        });
+
+        function showMoreInfo(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.style.display = section.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+    <script src="/Scripts/main.js"></script>
+
+</body>
+
+</html>
