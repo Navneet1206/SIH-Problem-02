@@ -1,0 +1,260 @@
+.donation-portal{
+    padding: 20px;
+}
+
+.head-1 {
+    margin-bottom: 20px;
+    color: #2b2b2b;
+    text-align: center;
+    font-weight: bold;
+}
+
+section{
+    margin-bottom: 20px;
+}
+
+.donate-p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1e90ff, #67d5b5);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.donate-btn {
+    padding: 15px 40px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.donate-btn:hover {
+    background-color: #333;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Donation Form Section */
+.donation-form-section {
+    background-color: #e6f2ef;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.donation-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.donation-options label {
+    background-color: white;
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.donation-options label:hover {
+    background-color: #1e90ff;
+    color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.donation-options span {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.custom-amount {
+    width: 150px;
+    padding: 10px;
+    margin-left: 20px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+}
+
+.donate-submit-btn {
+    padding: 15px 40px;
+    background-color: #67d5b5;
+    color: white;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.donate-submit-btn:hover {
+    background-color: #1e90ff;
+    transform: translateY(-3px);
+}
+
+/* Impact Stories Section */
+.impact-stories {
+    background-color: #f7f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.story {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.story:hover {
+    transform: translateY(-5px);
+}
+
+/* Why Donate Section */
+.why-donate {
+    background-color: #c1e1dd;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 20px;
+}
+
+.reasons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.reason {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    flex-basis: 30%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.reason:hover {
+    transform: translateY(-5px);
+}
+
+/* Volunteer Section */
+.volunteer {
+    background-color: #67d5b5;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.volunteer-btn {
+    padding: 15px 40px;
+    background-color: white;
+    color: #67d5b5;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.volunteer-btn:hover {
+    background-color: #1e90ff;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Completed Projects Section */
+.completed-projects {
+    background-color: #e6f2ef;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 20px;
+}
+
+.completed-projects ul {
+    list-style: none;
+    padding: 0;
+}
+
+.completed-projects ul li {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.completed-projects ul li strong {
+    color: #67d5b5;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donation-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reasons {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .reason {
+        flex-basis: 100%;
+    }
+}

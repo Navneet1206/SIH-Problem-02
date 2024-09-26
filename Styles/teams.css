@@ -1,0 +1,449 @@
+
+/* Teams Page */
+.teams-page {
+    background: url('/images/battle-background.jpg') no-repeat center center;
+    background-size: cover;
+    /* color: var(--lighter-blue-color); */
+    padding: 40px;
+    text-align: center;
+}
+
+.team-header {
+    margin-bottom: 40px;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: var(--secondary-green-color);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: var(--primary-blue-color); /* Keeping this as is since it's not defined in the new root */
+}
+
+.team-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.stat-card {
+    background-color: var(--lighter-blue-color); /* Keeping this as is since it's not defined in the new root */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-blue-color);
+    transition: background-color var(--transition-time), transform var(--transition-time);
+    width: 30%;
+}
+
+.stat-card h2, .stat-card p {
+    color: var(--hard-green);
+    margin-bottom: 10px;
+}
+
+.stat-card:hover {
+    background-color: rgba(78, 236, 81, 0.486);
+    transform: translateY(-5px);
+}
+
+.progress-bar {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    border: 0.5px solid var(--secondary-green-color);
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress {
+    background-color: var(--secondary-green-color);
+    height: 100%;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.team-members {
+    text-align: left;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.member-card {
+    background-color: var(--lighter-blue-color); /* Keeping this as is since it's not defined in the new root */
+    border: 2px solid var(--primary-blue-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    color: var(--primary-green-color);
+    text-align: center;
+    transition: transform var(--transition-time);
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+}
+
+.battle-area {
+    margin-top: 50px;
+}
+
+.battle-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.battle-card {
+    /* background-color: var(--card-bg-color); */
+    padding: 20px;
+    border-radius: var(--border-radius);
+    width: 30%;
+    margin: 10px;
+    transition: transform var(--transition-time);
+}
+
+.battle-card h3 {
+    color: var(--white-color);
+}
+
+.battle-card:hover {
+    transform: translateY(-5px);
+}
+
+button {
+    background-color: var(--secondary-green-color);
+    color: var(--white-color);
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: var(--secondary-green-color);
+}
+
+/* Info Toggle Section */
+#teamLobbyInfo, #teamStatsInfo, #addMemberInfo, #teamMembersInfo, #battleAreaInfo {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Add Member Section */
+.add-member {
+    background: var(--light-green-color);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--primary-blue-color);
+    color: var(--white-color);
+    margin-bottom: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.add-member h2 {
+    color: var(--hard-green);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.add-member form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-member label {
+    text-align: left;
+    font-size: 1rem;
+    color: var(--black-color);
+}
+
+.add-member input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0.5px solid var(--light-blue-color);
+    font-size: 1rem;
+}
+
+.add-member button {
+    background-color: var(--secondary-green-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.add-member button:hover {
+    background-color: var(--primary-green-color);
+}
+
+.more-member-btn{
+    background-color: var(--secondary-green-color);
+    margin-bottom: 30px;
+}
+/* Upcoming Events Section */
+.upcoming-events {
+    background-color: var(--light-green-color);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    margin: 40px 0px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-blue-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.event-card {
+    background-color: rgba(255, 255, 255, 0.73); /* Keeping this as is since it's not defined in the new root */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.event-card img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+.event-card h3 {
+    font-size: 1.5rem;
+    color: var(--black-color);
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    color: var(--hard-green); /* Keeping this as is since it's not defined in the new root */
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.read-more-btn {
+    background-color: var(--light-blue-color);
+    color: var(--black-color);
+    padding: 10px 20px;
+    border: 1px solid var(--black-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color var(--transition-time);
+}
+
+.read-more-btn:hover {
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--light-blue-color);
+}
+
+#team_member {
+    margin: 50px 10px 15px 10px;
+    font-size: 2rem;
+}
+
+/* Completed Tasks Section */
+.completed-tasks {
+    background-color: var(--lighter-blue-color);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.task-card {
+    border-radius: 8px;
+    background-color: var(--light-blue-color); /* Keeping this as is since it's not defined in the new root */
+    padding: 20px;
+    text-align: center;
+    transition: transform var(--transition-time), background-color var(--transition-time);
+}
+
+.task-card h3 {
+    font-size: 1.5rem;
+    color: var(--hard-green);
+    margin-bottom: 10px;
+}
+
+.task-card p {
+    font-size: 1rem;
+    color: var(--secondary-green-color); /* Keeping this as is since it's not defined in the new root */
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--white-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .events-grid, .tasks-grid {
+        grid-template-columns: 1fr; /* Stack cards on mobile */
+    }
+}
+
+/* For tablets (portrait orientation) */
+@media screen and (max-width: 1024px) {
+    .main-content {
+        margin-left: 200px; /* Adjust for smaller side nav on tablets */
+        width: calc(100% - 200px);
+    }
+
+    .team-stats {
+        display: grid; /* Container ko grid banata hai */
+        grid-template-columns: 1fr 1fr; /* Do columns banata hai, har column ko equal space deta hai */
+        gap: 10px; /* Grid items ke beech mein gap */
+    }
+    
+    .stat-card {
+        padding: 10px; /* Padding */
+        text-align: center; /* Center align text */
+        width: 100%;
+    }
+    
+    .add-member {
+        margin-left: 14%;
+        margin-right: 14%;
+    }
+    .members-grid, .battle-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member-card, .battle-card {
+        width: 100%;
+    }
+}
+
+/* For smaller tablets and large phones */
+@media screen and (max-width: 768px) {
+    .add-member {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .navbar {
+        width: 180px; /* Smaller nav */
+    }
+
+    .main-content {
+        margin-left: 180px;
+        width: calc(100% - 180px);
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .team-header .title {
+        font-size: 2rem;
+    }
+
+    .team-header .description {
+        font-size: 1rem;
+    }
+
+    .team-stats {
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .add-member h2 {
+        font-size: 1.5rem;
+    }
+
+    .add-member button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+    .sidebar.collapsed ~ main {
+        margin-left: 0px;
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 480px) {
+    .navbar {
+        width: 150px; /* Even smaller nav */
+    }
+
+    .main-content {
+        margin-left: 150px;
+        width: calc(100% - 150px);
+    }
+
+    .team-header .title {
+        font-size: 1.8rem;
+    }
+
+    .team-header .description {
+        font-size: 0.9rem;
+    }
+
+    .stat-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .stat-card p {
+        font-size: 0.9rem;
+    }
+
+    .members-grid, .battle-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .member-card, .battle-card {
+        width: 100%;
+    }
+
+    .add-member {
+        padding: 15px;
+    }
+
+    .add-member input {
+        padding: 8px;
+    }
+
+    .add-member button {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+
+    button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}

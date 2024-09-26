@@ -1,0 +1,156 @@
+:root {
+    --primary-green-color: #0F4D1C;
+    --secondary-green-color: #408D4C;
+    --primary-blue-color: #2469A2;
+    --white-clr: #ffff;
+    --light-green-bg: #d9f9d9; /* New Light Green Background */
+    --highlight-yellow: #f0db4f;
+}
+
+.rank-container {
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 20px auto;
+    padding: 10px;
+    background-color: var(--white-clr);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    border: 2px solid var(--primary-green-color);
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-green-color);
+    margin-bottom: 20px;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid var(--primary-green-color);
+    border-radius: 6px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: var(--light-green-bg); /* Light green input fields */
+    color: var(--primary-green-color);
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    background-color: var(--primary-green-color);
+    color: var(--white-clr);
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: var(--secondary-green-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 16px;
+    border: 1px solid var(--primary-green-color);
+    text-align: left;
+    font-size: 16px;
+}
+
+th {
+    background-color: var(--primary-green-color);
+    color: var(--white-clr);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.rank-hidden {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+h1 {
+    text-align: center;
+    color: var(--primary-green-color);
+    margin-bottom: 20px;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 90%;
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    width: 90%;
+    /* max-width: 400px; */
+    font-size: 16px;
+}
+
+    .container {
+        width: 80%;
+        /* max-width: 1200px; */
+        margin: 20px auto;
+        padding: 20px;
+        background-color: var(--white-clr);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        border: 2px solid var(--primary-green-color);
+    }
+    
+    table {
+        width: 90%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    
+    th, td {
+        padding: 10px;
+        border: 1px solid var(--primary-green-color);
+        text-align: left;
+        font-size: 10px;
+    }
+    
+    th {
+        background-color: var(--primary-green-color);
+        color: var(--white-clr);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    
+    .hidden {
+        display: none;
+    }
+}
+

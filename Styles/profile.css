@@ -1,0 +1,118 @@
+
+.profile-container {
+    flex: 1;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color:  #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #b2ebf2; /* Light Green */
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #eee;
+    margin-right: 20px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h1 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.edit-button {
+    background-color: #FFEB3B; /* Bright Yellow */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.about-section, .team-stats, .badges-section, .tasks-section {
+    margin-bottom: 20px;
+    background-color:  #b2ebf2;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #2F4F4F;
+    margin-bottom: 10px;
+}
+
+.stats-container, .badges-container, .tasks-container {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 20px; */
+}
+
+.card {
+    background-color: #F5F5DC; 
+    color: #2F4F4F;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.stat-item {
+    color: #00ACC1;
+}
+
+.badges-container .badge img {
+    width: 60px;
+    margin-bottom: 10px;
+    background-color: #FFEB3B; 
+}
+
+.tasks-container .task {
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+
+.card h3 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color:black;
+}
+
+/* Add responsive media query for small screens */
+@media (max-width: 768px) {
+    .profile-container {
+        margin-left: 0; /* Remove margin on small screens */
+        padding: 10px;
+    }
+
+    .stats-container, .badges-container, .tasks-container {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .card {
+        width: auto; /* Make cards take full width on small screens */
+    }
+
+}
+

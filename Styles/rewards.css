@@ -1,0 +1,179 @@
+/* body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  
+} */
+
+.rewards-main{
+  padding: 20px;
+}
+
+.header {
+  background-color: var(--lighter-blue-color);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 5px solid var(--dark-green);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+
+.points-section {
+  background-color: var(--light-blue-color);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.redeem-button {
+  background-color: var(--dark-green);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.redeem-button:hover {
+  background-color: var(--hard-green);
+}
+
+.rewards-section {
+  margin-top: 20px;
+}
+
+.rewards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.reward-card {
+  background-color: var(--white-color);
+  border: 1px solid var(--light-blue-color);
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  flex: 1 1 calc(33% - 20px); /* 3 items per row on larger screens */
+  max-width: calc(33% - 20px); /* Ensure max width for larger screens */
+}
+
+.reward-card:hover {
+  transform: scale(1.05);
+}
+
+.claim-button {
+  background-color: var(--dark-green);
+  color: var(--white-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.claim-button:hover {
+  background-color: var(--hard-green);
+}
+
+.redeemed-section {
+  margin-top: 20px;
+  background-color: var(--lighter-blue-color);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.redeemed-section h2 {
+  margin-top: 0;
+}
+
+#redeemed-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.leaderboard-section {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid var(--light-blue-color);
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: var(--lighter-blue-color);
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--lighter-blue-color);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .reward-card {
+      flex: 1 1 calc(50% - 20px); /* 2 items per row on medium screens */
+      max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+      font-size: 2em;
+  }
+
+  .points-section {
+      padding: 10px;
+  }
+
+  .redeem-button {
+      padding: 8px 15px;
+      font-size: 0.9em;
+  }
+
+  .reward-card {
+      flex: 1 1 100%; /* 1 item per row on small screens */
+      max-width: 100%;
+      margin: 5px 0; /* Adjust margin for smaller screens */
+      padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .claim-button {
+      padding: 8px 10px;
+      font-size: 0.9em;
+  }
+
+  .redeemed-section {
+      padding: 10px;
+  }
+
+  table {
+      font-size: 0.9em;
+  }
+
+  th, td {
+      padding: 8px;
+  }
+}
